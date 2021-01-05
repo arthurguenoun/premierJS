@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercice JS</title>
+    <style>
+        div{
+		padding: 50px;
+		}
+		img {
+		width: 100%;
+		margin: 0 auto;}
+      
+    </style>
+</head>
+<body>
+    <script>
+	   document.write('<h2> PARTIE 1 : l\'oiseau-phoque</h2>');
+		var couleur = prompt('Entrez une couleur en hexadecimal'); 
+	</script>
+	<div id="div">
+	<img src="https://www.chakipet.com/wp-content/uploads/animalhybride19.jpg">
+	</div>
+	<script>
+	console.log(couleur)
+		var fond = document.getElementById("div");
+		fond.style.backgroundColor = couleur;
+
+	function calculTva(nbr) {
+		return nbr*1.2;
+	}
+	 
+	 var confirm = confirm('Voulez vous voir la partie 2 ?');
+	 
+	 if (confirm == false) {
+		alert ("Une prochaine fois !");
+	} else {
+		 document.write('<h2> PARTIE 2 :  Calcul de la TVA </h2>');
+		 var montant = prompt('Entrez un montant');
+		 if (Number(montant) && montant !=null){
+			calculTva(montant);
+			 document.write('<p> Pour un montant de ' + montant + '€ HT cela fait : ' + calculTva(montant) + '€  TTC. </p>');
+		 } else {
+			document.write('<p> Mauvais montant désolé </p>')
+		 }
+	}
+	
+	 if (confirm == false) {
+		document.write ("<h2> PARTIE 2 :  Boucles </h2>");
+	} else {
+		document.write("<h2> PARTIE 3 :  Boucles </h2>"); }
+		
+		var chaine = prompt('Proposez une chaine');
+		
+		if (chaine == null){
+		document.write('<p> La chaine est vide </p>');
+		} else {
+		for (var i=1; i<= chaine.length; i++){
+		document.write('<p>' + i + ': ' + chaine.substr(i-1,1)  + '</p>')
+		}}
+	</script>
+</body>
+</html>
